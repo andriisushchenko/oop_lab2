@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:labaDva.Models"
+
+             x:Class="labaDva.MainPage"
+
+             Title="Лабораторна робота 2 (XML Аналіз)">
+
+    <Grid>
+
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="10">
+
+                <Label Text="1. Завантаження файлів" FontSize="Medium" FontAttributes="Bold" Margin="0,40,0,0" />
+                <Button x:Name="LoadXmlButton"
+                        Text="Завантажити XML-файл"
+                        Clicked="LoadXmlButton_Clicked" />
+
+                <Label x:Name="XmlFileLabel" Text="XML-файл не завантажено" FontSize="Small" />
+
+                <Button x:Name="LoadXslButton"
+                        Text="Завантажити XSL-файл (для трансформації)"
+                        Clicked="LoadXslButton_Clicked" />
+
+                <Label x:Name="XslFileLabel" Text="XSL-файл не завантажено" FontSize="Small" />
+
+                <Line Stroke="Gray" StrokeDashArray="1,1" Margin="0,10" />
+
+                <Label Text="2. Параметри пошуку" FontSize="Medium" FontAttributes="Bold" />
+
+                <Label Text="Виберіть стратегію аналізу:" />
+                <Picker x:Name="StrategyPicker"
+                        Title="Виберіть стратегію"
+                        ItemsSource="{Binding StrategyNames}"
+                        SelectedItem="{Binding SelectedStrategyName}" />
+
+                <Label Text="Виберіть атрибут для пошуку:" />
+                <Picker x:Name="AttributePicker"
+                        Title="Виберіть атрибут"
+                        ItemsSource="{Binding AvailableAttributes}"
+                        SelectedItem="{Binding SelectedAttribute}" />
+
+                <Label Text="Виберіть значення для пошуку:" />
+                <Picker x:Name="ValuePicker"
+                        Title="Виберіть значення"
+                        ItemsSource="{Binding AvailableValues}"
+                        SelectedItem="{Binding SearchValue}" />
+
+                <Grid ColumnSpacing="10" Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"
+                            x:Name="SearchButton"
+                            Text="🔍 Пошук"
+                            Clicked="SearchButton_Clicked"
+                            IsEnabled="False" />
+
+                    <Button Grid.Column="1"
+                            x:Name="TransformButton"
+                            Text="🔄 Трансформувати"
+                            Clicked="TransformButton_Clicked"
+                            IsEnabled="False" />
+                </Grid>
+
+                <Button x:Name="ClearButton"
+                        Text="🧹 Очистити все"
+                        Clicked="ClearButton_Clicked"
+                        BackgroundColor="Gray" />
+
+                <Line Stroke="Gray" StrokeDashArray="1,1" Margin="0,10" />
+
+                <Label Text="3. Результати пошуку" FontSize="Medium" FontAttributes="Bold" />
+
+                <CollectionView x:Name="ResultsView"
+                            ItemsSource="{Binding SearchResults}"
+                            HeightRequest="300"
+                            BackgroundColor="LightGray"
+                            SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Student">
+                            <Frame Padding="10" Margin="5" CornerRadius="5">
+
+                                <Label Text="{Binding .}" 
+                                   LineBreakMode="WordWrap"
+                                   FontSize="Small" />
+
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+
+                <Line Stroke="Gray" StrokeDashArray="1,1" Margin="0,10" />
+
+                <Label Text="4. Результат HTML-трансформації" FontSize="Medium" FontAttributes="Bold" />
+
+                <WebView x:Name="HtmlWebView"
+                         HeightRequest="400"
+                         Source="{Binding HtmlContentSource}" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Button x:Name="ExitButton"
+                Text="❌"
+                Clicked="ExitButton_Clicked" 
+                BackgroundColor="DarkRed"
+                TextColor="White"
+                BorderColor="White"
+                BorderWidth="1"
+                CornerRadius="25"       
+                WidthRequest="50"       
+                HeightRequest="50"      
+                HorizontalOptions="End"   VerticalOptions="Start" Margin="0,10,10,0"        ZIndex="99" />
+    </Grid>
+
+</ContentPage>

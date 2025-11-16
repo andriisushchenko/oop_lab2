@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="labaDva/labaDva.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
