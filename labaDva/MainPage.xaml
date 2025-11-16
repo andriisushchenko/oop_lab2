@@ -55,19 +55,19 @@
 
                     <Button Grid.Column="0"
                             x:Name="SearchButton"
-                            Text="🔍 Пошук"
+                            Text="Пошук"
                             Clicked="SearchButton_Clicked"
                             IsEnabled="False" />
 
                     <Button Grid.Column="1"
                             x:Name="TransformButton"
-                            Text="🔄 Трансформувати"
+                            Text="Трансформувати"
                             Clicked="TransformButton_Clicked"
                             IsEnabled="False" />
                 </Grid>
 
                 <Button x:Name="ClearButton"
-                        Text="🧹 Очистити все"
+                        Text="Очистити все"
                         Clicked="ClearButton_Clicked"
                         BackgroundColor="Gray" />
 
