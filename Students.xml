@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Students>
+  <Student Faculty="КНІТ" Department="ІПЗ" Scholarship="true" Status="Active">
+    <Name>Іван Петренко</Name>
+    <Disciplines>
+      <Discipline>
+        <SubjectName>Програмування</SubjectName>
+        <Grade>95</Grade>
+      </Discipline>
+      <Discipline>
+        <SubjectName>Бази даних</SubjectName>
+        <Grade>88</Grade>
+      </Discipline>
+    </Disciplines>
+  </Student>
+  <Student Faculty="КНІТ" Department="КІ" Status="Active">
+    <Name>Марія Cидоренко</Name>
+    <Disciplines>
+      <Discipline>
+        <SubjectName>Програмування</SubjectName>
+        <Grade>77</Grade>
+      </Discipline>
+      <Discipline>
+        <SubjectName>Математичний аналіз</SubjectName>
+        <Grade>92</Grade>
+      </Discipline>
+    </Disciplines>
+  </Student>
+  <Student Faculty="ФЕЛ" Department="ЕТ" Scholarship="false">
+    <Name>Олег Василенко</Name>
+    <Disciplines>
+      <Discipline>
+        <SubjectName>Теорія кіл</SubjectName>
+        <Grade>65</Grade>
+      </Discipline>
+    </Disciplines>
+  </Student>
+</Students>

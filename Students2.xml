@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Students>
+  <Student Faculty="КНІТ" Department="ІПЗ" Scholarship="true" Status="Active">
+    <Name>Іван Петренко</Name>
+    <Faculty>КНІТ</Faculty>
+    <Department>ІПЗ</Department>
+    <Disciplines>
+      <Discipline>
+        <SubjectName>Програмування</SubjectName>
+        <Grade>95</Grade>
+      </Discipline>
+      <Discipline>
+        <SubjectName>Бази даних</SubjectName>
+        <Grade>88</Grade>
+      </Discipline>
+      <Discipline>
+        <SubjectName>Алгоритми і структури даних</SubjectName>
+        <Grade>92</Grade>
+      </Discipline>
+    </Disciplines>
+  </Student>
+  
+  <Student Faculty="КНІТ" Department="КІ" Status="Active">
+    <Name>Марія Cидоренко</Name>
+    <Faculty>КНІТ</Faculty>
+    <Department>КІ</Department>
+    <Disciplines>
+      <Discipline>
+        <SubjectName>Програмування</SubjectName>
+        <Grade>77</Grade>
+      </Discipline>
+      <Discipline>
+        <SubjectName>Математичний аналіз</SubjectName>
+        <Grade>81</Grade>
+      </Discipline>
+    </Disciplines>
+  </Student>
+
+  <Student Faculty="ФЕЛ" Department="ЕТ" Scholarship="false" Hostel="true">
+    <Name>Олег Василенко</Name>
+    <Faculty>ФЕЛ</Faculty>
+    <Department>ЕТ</Department>
+    <Disciplines>
+      <Discipline>
+        <SubjectName>Теорія кіл</SubjectName>
+        <Grade>65</Grade>
+      </Discipline>
+      <Discipline>
+        <SubjectName>Промислова електроніка</SubjectName>
+        <Grade>71</Grade>
+      </Discipline>
+    </Disciplines>
+  </Student>
+  
+  <Student Faculty="ФІОТ" Department="ОТ" Status="Probation" Hostel="true">
+    <Name>Сергій Коваль</Name>
+    <Faculty>ФІОТ</Faculty>
+    <Department>ОТ</Department>
+    <Disciplines>
+      <Discipline>
+        <SubjectName>Архітектура ЕОМ</SubjectName>
+        <Grade>55</Grade>
+      </Discipline>
+      <Discipline>
+        <SubjectName>Програмування</SubjectName>
+        <Grade>61</Grade>
+      </Discipline>
+    </Disciplines>
+  </Student>
+  
+  <Student Faculty="ФММ" Department="ММ" Scholarship="true">
+    <Name>Анна Бровченко</Name>
+    <Faculty>ФММ</Faculty>
+    <Department>ММ</Department>
+    <Disciplines>
+      <Discipline>
+        <SubjectName>Маркетинг</SubjectName>
+        <Grade>98</Grade>
+      </Discipline>
+      <Discipline>
+        <SubjectName>Менеджмент</SubjectName>
+        <Grade>90</Grade>
+      </Discipline>
+    </Disciplines>
+  </Student>
+</Students>
